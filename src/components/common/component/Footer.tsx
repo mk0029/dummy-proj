@@ -13,7 +13,7 @@ const Footer = () => {
               <div className="pl-4 lg:pl-0">
                 <Link aria-label="Home" href="/">
                   <Icons
-                    className="w-[200px] md:w-[338px] h-auto"
+                    className="w-[200px] md:w-[250px] xl:w-[338px] h-auto"
                     icon="footer-logo"
                   />
                 </Link>

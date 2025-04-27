@@ -1,9 +1,10 @@
 import React from "react";
 import Cards from "./Cards";
 
-const TechSolutions = () => {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const TechSolutions = ({ cards }: { cards: any }) => {
   return (
-    <div className=" mt-14 sm:mt-16 md:mt-28 lg:mt-32">
+    <div className=" mt-1 sm:mt-16 md:mt-28 lg:mt-32">
       <div className="mx-auto w-full max-w-[1180px] lg:mb-24 px-5">
         <h2 className="text-center font-light mb-2 md:mb-4 text-base md:text-2xl">
           Supporting growing brands with tech solutions.
@@ -13,7 +14,7 @@ const TechSolutions = () => {
         </h3>
       </div>
       <div className="container-full">
-        <Cards />
+        <Cards cards={cards} />
       </div>
     </div>
   );

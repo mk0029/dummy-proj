@@ -1,7 +1,8 @@
-import React from "react";
+/* eslint-disable @typescript-eslint/no-explicit-any */
+// pages/selected-cases.js
 import Cards from "./Cards";
 
-const SelectedCases = () => {
+const SelectedCases = ({ cards: list }: { cards: any }) => {
   return (
     <section className="mt-12 sm:mt-16 md:mt-28 lg:mt-32">
       <div className="mx-auto px-4 lg:px-[18px]">
@@ -14,7 +15,7 @@ const SelectedCases = () => {
               We earned the trust from leading brands
             </h2>
           </div>
-          <Cards />
+          <Cards list={list || []} />
         </div>
       </div>
     </section>
