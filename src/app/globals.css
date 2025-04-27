@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap");
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+*,
+::after,
+::before {
+  font-family: "Hanken Grotesk", sans-serif;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --text-custom-3xl: "30px";
+  --text-custom-6xl: "64px";
+}
+@layer {
+  .container-full {
+    @apply px-4 mx-auto lg:px-[18px];
+  }
+  .underline-custom::after {
+    content: "";
+
+    @apply absolute left-1/2 -translate-x-1/2 h-px bottom-1.5 w-0 !transition-all !duration-300
+      bg-black;
+  }
+  .underline-custom:hover::after {
+    @apply w-[60%];
+  }
+  .common-smoothness {
+    @apply transition-all ease-linear duration-300;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: white;
+}
+.group:hover svg.circ-talk path:nth-child(1) {
+  @apply stroke-white;
+}
+.group:hover svg.circ-talk path:nth-child(2) {
+  @apply fill-white;
+}
+.swiper-wrapper {
+  transition-timing-function: linear !important;
+}
